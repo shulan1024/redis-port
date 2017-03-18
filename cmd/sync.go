@@ -207,7 +207,7 @@ func (cmd *cmdSync) SyncRDBFile(reader *bufio.Reader, target, passwd string, nsi
 						cmd.nentry.Incr()
 						if e.DB != lastdb {
 							lastdb = e.DB
-							selectDB(c, lastdb)
+							// selectDB(c, lastdb)
 						}
 						restoreRdbEntry(c, e, codis)
 					}
